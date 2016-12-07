@@ -6,6 +6,19 @@
   color: $primaryRed;
 }
 
+.func-text {
+  color: #cc7832;
+}
+.var-text {
+  color: #9876AA;
+}
+.green-text {
+  color: #6A8759;
+}
+
+.function-text {
+  color: #FFC66D;
+}
 .flex-space-between {
   display: flex;
   justify-content: space-between;
@@ -20,3 +33,4 @@
   text-indent: 2em;
   line-height: 0.5em;
 }
+

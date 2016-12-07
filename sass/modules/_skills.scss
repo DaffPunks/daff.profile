@@ -16,7 +16,7 @@
 
 .desktop-ide {
   position: absolute;
-  background-color: $primaryDarkBlue;
+  background-color: #2B2B2B;
   top: 26px;
   left: 38px;
   width: calc(100% - 38px * 2);
@@ -65,7 +65,7 @@
   font-weight: 700;
   padding: 5px 20px;
   font-size: 16px;
-  color: $primaryRed;
+  color: white;
   opacity: 1;
 
   transition-property: opacity;
@@ -136,9 +136,25 @@
   height: calc(100% - 26px - 60px);
   border-radius: 5px;
 
-  transition-property: height, width, top;
+  transition-property: height, width, top, left, opacity;
   transition-duration: 0.8s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease;
+}
+
+.desktop-br-anim {
+  cursor: pointer;
+  height: 25px;
+  width: 50px;
+  top: 90%;
+  left: 362px;
+  opacity: 0;
+}
+
+.desktop-br-fullscreen {
+  top: 0;
+  left: 0;
+  width: calc(100%);
+  height: calc(100% - 60px);
 }
 
 .dock {
@@ -169,8 +185,6 @@
 }
 
 .dock-icon {
-  cursor: pointer;
-  bottom: 0;
   height: 20px;
   width: 20px;
   border-radius: 15px;
@@ -182,6 +196,8 @@
 }
 
 .icon-wrapper {
+  bottom: 0;
+  cursor: pointer;
   border-radius: 100px;
   padding: 5px;
   background-color: white;
@@ -199,6 +215,16 @@
     height: 50px;
     width: 50px;
   }
+}
+
+.front-wrapper {
+  background: linear-gradient(-24deg, rgb(96, 224, 230), rgb(45, 141, 217));
+  background: -webkit-linear-gradient(-24deg, rgb(96, 224, 230), rgb(45, 141, 217));
+}
+
+.back-wrapper {
+  background: linear-gradient(161deg, rgb(118, 90, 248), rgb(253, 62, 149));
+  background: -webkit-linear-gradient(161deg, rgb(118, 90, 248), rgb(253, 62, 149));
 }
 
 .frontend-icon {
