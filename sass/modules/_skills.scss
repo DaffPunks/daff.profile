@@ -140,7 +140,7 @@
   left: 0;
   right: 0;
   bottom: 0px;
-  width: 120px;
+  width: 80px;
   height: 40px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -156,7 +156,7 @@
 }
 
 .dock-hovered {
-  width: 200px;
+  width: 120px;
 }
 
 .dock-icon {
@@ -178,14 +178,14 @@
 }
 
 .frontend-icon {
-  padding: 10px;
-  background: #52ac62 url("../images/code.svg") no-repeat;
+  //padding: 10px;
+  background: url("../images/front-icon.png") no-repeat;
   background-size: contain;
 }
 
 .backend-icon {
-  padding: 10px 10px;
-  background: #52ac62 url("../images/admin.svg") no-repeat;
+  //padding: 10px 10px;
+  background: url("../images/back-icon.png") no-repeat;
   background-size: contain;
 }
 
