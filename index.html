@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/typed.js/dist/typed.min.js"></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="wrapper flex-space-between">
+        <div class="h-logo">
+            <a href=""><span class="red-text">A</span><span class="blue-text">S</span></a>
+        </div>
+        <div class="h-navigation">
+            <ul>
+                <li>
+                    <a href="">about</a>
+                </li>
+                <li>
+                    <a href="">portfolio</a>
+                </li>
+                <li>
+                    <a href="">blog</a>
+                </li>
+                <li>
+                    <a class="h-contact-me" href="">contact me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section id="main">
+    <div class="wrapper text-center">
+        <div class="typed-strings">
+            <p>Hi. Nice to meet you!</p>
+            <p>I’m <span class="red-text">A</span>leksander <span class="blue-text">S</span>inyatkin</p>
+        </div>
+        <div class="typings"></div>
+        <div class="m-line"></div>
+        <div class="main-info">
+            I am a russian web-developer based in Kemerovo, Russia.
+        </div>
+        <div class="m-line"></div>
+    </div>
+</section>
+<section id="skills">
+    <div class="wrapper">
+        <div class="s-imac-background">
+            <div class="desktop-bg">
+                <div style="display: none" class="desktop-browser">
+                    <div class="br-open-button">
+                    </div>
+                    <div class="desktop-bar desktop-bar-br">
+                        <div class="bar-buttons">
+                            <div class="bar-button b-red br-close-button">
+                            </div>
+                            <div class="bar-button b-yellow">
+                            </div>
+                            <div class="bar-button b-green">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="desktop-ide">
+                    <div class="i-open-button">
+                    </div>
+                    <div class="desktop-bar desktop-bar-ide">
+                        <div class="bar-buttons">
+                            <div class="bar-button b-red i-close-button">
+                            </div>
+                            <div class="bar-button b-yellow">
+                            </div>
+                            <div class="bar-button b-green">
+                            </div>
+                            <div class="bar-title">
+                                Backend
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ide-text">
+                        <p>{</p>
+                        <p class="text-indent-1">Frameworks: {</p>
+                        <p class="text-indent-2">PHP: Laravel 5</p>
+                        <p class="text-indent-1">},</p>
+                        <p class="text-indent-1">DataBases: {</p>
+                        <p class="text-indent-2">MySQL, PostgreSQL, FireBird, Oracle</p>
+                        <p class="text-indent-1">},</p>
+                        <p class="text-indent-1">Other: {</p>
+                        <p class="text-indent-2">RestAPI,</p>
+                        <p class="text-indent-2">Design_Patterns,</p>
+                        <p class="text-indent-2">SOLID,</p>
+                        <p class="text-indent-2">Data Structures and Algorithms</p>
+                        <p class="text-indent-1">}</p>
+                        <p>}</p>
+                    </div>
+                </div>
+                <div class="dock">
+                    <div class="dock-icon frontend-icon">
+                    </div>
+                    <div class="dock-icon backend-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(function(){
+        $(".typings").typed({
+            stringsElement: $(".typed-strings"),
+            typeSpeed: 5,
+            callback: function () {
+
+            },
+            showCursor: true,
+        });
+    });
+</script>
+</body>
+</html>

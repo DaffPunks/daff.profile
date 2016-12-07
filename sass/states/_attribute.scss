@@ -1,0 +1,22 @@
+.blue-text {
+  color: $secondaryBlue;
+}
+
+.red-text {
+  color: $primaryRed;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-indent-1 {
+  text-indent: 1em;
+  line-height: 0.5em;
+}
+
+.text-indent-2 {
+  text-indent: 2em;
+  line-height: 0.5em;
+}

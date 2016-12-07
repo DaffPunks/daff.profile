@@ -1,0 +1,198 @@
+.s-imac-background {
+  width: 815px;
+  height: 507px;
+  background: url("../images/mac.png") no-repeat;
+  background-size: contain;
+  padding: 54px 163px 109px 162px;
+  margin-bottom: 100px;
+}
+
+.desktop-bg {
+  position: relative;
+  background-color: $secondaryBlue;
+  width: 100%;
+  height: 100%;
+}
+
+.desktop-ide {
+  position: absolute;
+  background-color: $primaryDarkBlue;
+  top: 26px;
+  left: 38px;
+  width: calc(100% - 38px * 2);
+  height: calc(100% - 26px - 60px);
+  border-radius: 5px;
+
+  transition-property: height, width, top;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+}
+
+.desktop-ide-anim {
+  cursor: pointer;
+  height: 25px;
+  width: 50px;
+  top: 90%;
+}
+
+.desktop-bar {
+  height: 24px;
+  width: 100%;
+  background-color: #d7dadb;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  opacity: 1;
+
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.desktop-bar-anim {
+  opacity: 0;
+}
+
+.ide-text {
+  font-weight: 700;
+  padding: 5px 20px;
+  font-size: 16px;
+  color: $primaryRed;
+  opacity: 1;
+
+  transition-property: opacity;
+  transition-delay: 0.8s;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.ide-text-anim {
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+
+.i-open-button {
+  width: 100%;
+  height: 0;
+
+  transition-property: height;
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.i-open-button-anim {
+  transition-delay: 0.8s;
+  height: 100%;
+}
+
+.bar-buttons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.bar-button {
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  margin-right: 4px;
+  float: left;
+}
+
+.b-red {
+  background-color: #fc4349;
+}
+
+.b-yellow {
+  background-color: #ffc600;
+}
+
+.b-green {
+  background-color: #52ac62;
+}
+
+.desktop-browser {
+  position: absolute;
+  background-color: white;
+  top: 26px;
+  left: 38px;
+  width: calc(100% - 38px * 2);
+  height: calc(100% - 26px - 60px);
+  border-radius: 5px;
+
+  transition-property: height, width, top;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+.dock {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #1c3c50;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  transition-property: width;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.dock-hovered {
+  width: 200px;
+}
+
+.dock-icon {
+  cursor: pointer;
+  bottom: 0;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+
+  transition-property: height, width;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+
+  &:hover {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.frontend-icon {
+  padding: 10px;
+  background: #52ac62 url("../images/code.svg") no-repeat;
+  background-size: contain;
+}
+
+.backend-icon {
+  padding: 10px 10px;
+  background: #52ac62 url("../images/admin.svg") no-repeat;
+  background-size: contain;
+}
+
+.bar-title {
+  margin-top: 2px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  color: $primaryDarkBlue;
+}
