@@ -26,7 +26,7 @@ $(function () {
         }
     });
 
-    $(".dock-icon").hover(function () {
+    $(".icon-wrapper").hover(function () {
        $(".dock").addClass("dock-hovered");
     }, function () {
         $(".dock").removeClass("dock-hovered");
