@@ -5,6 +5,7 @@
   background-size: contain;
   padding: 54px 163px 109px 162px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .desktop-bg {
@@ -28,20 +29,20 @@
   transition-timing-function: ease;
 }
 
-.desktop-ide-anim {
+.desktop-ide-fullscreen {
+  top: 0;
+  left: 0;
+  width: calc(100%);
+  height: calc(100% - 60px);
+}
+
+.desktop-ide-hide {
   cursor: pointer;
   height: 25px;
   width: 50px;
   top: 90%;
   left: 362px;
   opacity: 0;
-}
-
-.desktop-ide-fullscreen {
-  top: 0;
-  left: 0;
-  width: calc(100%);
-  height: calc(100% - 60px);
 }
 
 .desktop-bar {
@@ -57,11 +58,11 @@
   transition-timing-function: ease-in-out;
 }
 
-.desktop-bar-anim {
+.desktop-bar-hide {
   opacity: 0;
 }
 
-.ide-text {
+.desktop-ide-content {
   font-weight: 700;
   padding: 5px 20px;
   font-size: 16px;
@@ -74,7 +75,26 @@
   transition-timing-function: linear;
 }
 
-.ide-text-anim {
+.desktop-ide-content-hide {
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+
+.desktop-browser-content {
+  font-weight: 700;
+  padding: 5px 20px;
+  font-size: 16px;
+  color: grey;
+  opacity: 1;
+
+  transition-property: opacity;
+  transition-delay: 0.8s;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.desktop-browser-content-hide {
   transition-delay: 0s;
   transition-duration: 0.2s;
   opacity: 0;
@@ -90,7 +110,7 @@
   transition-timing-function: linear;
 }
 
-.i-open-button-anim {
+.i-open-button-hide {
   transition-delay: 0.8s;
   height: 100%;
 }
@@ -141,20 +161,20 @@
   transition-timing-function: ease;
 }
 
-.desktop-br-anim {
+.desktop-browser-fullscreen {
+  top: 0;
+  left: 0;
+  width: calc(100%);
+  height: calc(100% - 60px);
+}
+
+.desktop-browser-hide {
   cursor: pointer;
   height: 25px;
   width: 50px;
   top: 90%;
   left: 362px;
   opacity: 0;
-}
-
-.desktop-br-fullscreen {
-  top: 0;
-  left: 0;
-  width: calc(100%);
-  height: calc(100% - 60px);
 }
 
 .dock {
@@ -196,6 +216,7 @@
 }
 
 .icon-wrapper {
+  z-index: 2;
   bottom: 0;
   cursor: pointer;
   border-radius: 100px;

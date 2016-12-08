@@ -9,6 +9,14 @@
     "typed.js": "^1.1.1"
   },
   "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "gulp-babel": "^6.1.2",
     "gulp-sass": "^2.3.2"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   }
 }

@@ -1,18 +1,16 @@
 $(function () {
-    let is_hidden = false;
+    var frontendOnForeground = false;
 
     $(".i-close-button").click(function () {
         $(".desktop-ide").addClass("desktop-ide-anim");
         $(".desktop-bar-ide").addClass("desktop-bar-anim");
         $(".ide-text").addClass("ide-text-anim");
         $(".i-open-button").addClass("i-open-button-anim");
-        is_hidden = true;
     });
 
     $(".br-close-button").click(function () {
         $(".desktop-browser").addClass("desktop-br-anim");
         $(".desktop-bar-br").addClass("desktop-bar-anim");
-        is_hidden = true;
     });
 
     $(".i-fullscreen-button").click(function () {
@@ -24,10 +22,10 @@ $(function () {
     });
 
     $(".br-fullscreen-button").click(function () {
-        if($(".desktop-browser").hasClass("desktop-br-fullscreen")) {
-            $(".desktop-browser").removeClass("desktop-br-fullscreen");
+        if($(".desktop-browser").hasClass(".desktop-br-fullscreen")) {
+            $(".desktop-browser").removeClass(".desktop-br-fullscreen");
         } else {
-            $(".desktop-browser").addClass("desktop-br-fullscreen");
+            $(".desktop-browser").addClass(".desktop-br-fullscreen");
         }
     });
 
@@ -49,6 +47,10 @@ $(function () {
             $(".ide-text").addClass("ide-text-anim");
             $(".i-open-button").addClass("i-open-button-anim");
         }
+        if(frontendOnForeground) {
+            $(".desktop-browser").css("z-index", 0);
+            frontendOnForeground = false;
+        }
     });
 
     $(".icon-wrapper").has(".frontend-icon").click(function () {
@@ -61,24 +63,6 @@ $(function () {
         }
     });
 
+
+
 });
-$PHP = 1;
-$database = 1;
-
-function backend() {
-    if($PHP) {
-        // Laravel 5
-    }
-    if($database) {
-        // MySQL, PostgreSQL, FireBird, Oracle
-    }
-
-    $other = [
-        'RESTful API',
-        'OOP',
-        'Design Patterns',
-        'Data Structure and Algorithms'
-    ];
-}
-
-backend();
