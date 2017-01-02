@@ -4,24 +4,37 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 
+var paths = {
+    style: 'assets/sass/**/*.scss',
+    styleIndex: 'assets/sass/*.scss',
+    script: 'assets/js/**/*.js',
+    src: './',
+    npmJS: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/typed.js/dist/typed.min.js'],
+    npmCSS: [] //'node_modules/bootstrap/dist/css/bootstrap.min.css'
+};
+
 gulp.task('sass', function () {
-    gulp.src('./sass/style.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+    gulp.src(paths.styleIndex)
+        .pipe(sass())
+        .pipe(gulp.dest(paths.src + 'css'));
 });
 
 gulp.task('js', () => {
-    return gulp.src('scripts/scriptES6.js')
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest('scripts/dist'));
+    gulp.src(paths.script)
+        .pipe(babel())
+        .pipe(gulp.dest(paths.src + 'js'));
 });
 
-gulp.task('sass:watch', function () {
-    gulp.watch(['./sass/*.scss', './sass/*/*.scss'], ['sass']);
+gulp.task('watch', function () {
+    gulp.watch([paths.style, paths.script], ['sass', 'js']);
 });
 
-gulp.task('js:watch', function () {
-    gulp.watch(['./scripts/scriptES6.js'], ['js']);
+gulp.task('libs', () => {
+    gulp.src(paths.npmCSS)
+        .pipe(gulp.dest(paths.src + 'css'));
+    gulp.src(paths.npmJS)
+        .pipe(gulp.dest(paths.src + 'js'));
 });
+
+gulp.task('default', ['libs', 'sass', 'js', 'watch']);
+

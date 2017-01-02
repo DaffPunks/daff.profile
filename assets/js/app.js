@@ -70,7 +70,6 @@ class Window {
 }
 
 class DockButton {
-
     constructor(buttonClass, selector, window, otherWindows) {
         this._mainDOM = $("." + buttonClass).has("." + selector);
         this._window = window;
